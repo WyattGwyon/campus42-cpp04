@@ -6,7 +6,7 @@
 /*   By: clouden <clouden@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 00:11:00 by clouden           #+#    #+#             */
-/*   Updated: 2026/06/01 00:13:23 by clouden          ###   ########.fr       */
+/*   Updated: 2026/06/03 12:32:50 by clouden          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 
 int	main(void)
 {
-	Animal	a = Animal();
-	Dog		d = Dog();
-	Cat		c = Cat();
+	Animal	meta = Animal();
+	Dog		dog = Dog();
+	Cat		cat = Cat();
 
-	a.makeSound();
-	d.makeSound();
-	c.makeSound();
+	std::cout << meta.getType() << " " << std::endl;
+	std::cout << dog.getType() << " " << std::endl;
+	std::cout << cat.getType() << " " << std::endl;
+	meta.makeSound();
+	dog.makeSound();
+	cat.makeSound();
 }
 
