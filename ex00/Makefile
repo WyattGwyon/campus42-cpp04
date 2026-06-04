@@ -6,7 +6,7 @@
 #    By: clouden <clouden@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/26 15:54:35 by clouden           #+#    #+#              #
-#    Updated: 2026/06/03 22:10:25 by clouden          ###   ########.fr        #
+#    Updated: 2026/06/04 20:49:12 by clouden          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS		=	main.cpp \
 				Cat.cpp \
 				WrongAnimal.cpp \
 				WrongCat.cpp
-OBJS		=	$(SRC:%.cpp=%.o)
+OBJS		=	$(SRCS:%.cpp=%.o)
 INCL		=	Animal.hpp \
 				Dog.hpp \
 				Cat.hpp \
@@ -30,8 +30,8 @@ INCL		=	Animal.hpp \
 
 all: $(NAME)
 
-$(NAME):
-	$(CXX) $(CXXFLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp $(INCL)
 	$(CXX) $(CXXFLAGS) -c $< -o $@

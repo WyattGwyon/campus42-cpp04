@@ -6,7 +6,7 @@
 /*   By: clouden <clouden@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 22:41:06 by clouden           #+#    #+#             */
-/*   Updated: 2026/06/04 12:14:37 by clouden          ###   ########.fr       */
+/*   Updated: 2026/06/04 18:24:23 by clouden          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ public:
 	Dog &operator=(const Dog& dog);
 	~Dog();
 
-	void	makeSound() const;
+	void				makeSound() const;
+	const std::string&	getIdea(const int idx) const;
+	void				setIdea(const int idx, const std::string& idea);
 };
 
 #endif
